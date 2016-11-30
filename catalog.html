@@ -1,0 +1,473 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--[if IE]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Catalog</title>
+    <link type="text/css" rel="stylesheet" href="css/reset.css">
+    <link type="text/css" rel="stylesheet" href="css/deskCatalog.css">
+    <link type="text/css" rel="stylesheet" href="css/tabletCatalog.css">
+    <link type="text/css" rel="stylesheet" href="css/mobileCatalog.css">
+</head>
+<body>
+    <header>
+        <div class="stickyHeader">
+            <section class="headTop clearfix">
+	            <h1 class="logo_tm rise">
+	                <a href="start.html">    
+	                    TL
+	                </a>
+	            </h1>
+	            <div class="login_bag">
+	                <a href="shoppingBag.html" class="bagIn">Bag</a>
+	                <div class="emailSign"><a href="#">E-mail sing up</a></div>
+	            </div>
+        	</section>
+            <nav class="mainNav clearfix">
+	            <div class="closeMainMenu"></div>
+	            <ul class="mainMenu rise"><!--
+	                --><li><a href="#">Women</a></li><!--
+	                --><li><a href="#">Men</a></li><!--
+	                --><li><a href="#">Handbags</a></li><!--
+	                --><li><a href="#">Accessories</a></li><!--
+	                --><li><a href="#">Sale</a></li><!--
+	                --><li><a href="#">New Arrivals</a></li><!--
+	                --><li><a href="#">Clearance</a></li><!--
+	                --><li><a href="#">Store Locator</a></li><!--
+	            --></ul>
+	            <div class="searchAround">
+	                <input type="text" class="mobileSearch" placeholder="Style Name">
+	            </div>
+	            <input type="text" class="search" placeholder="Style Name">
+	            <input type="text" class="tabletSearch" placeholder="Style Name">
+	            <div class="btnSearch"></div>
+        	</nav>
+        </div>
+    </header>
+    <main>
+	    <section class="filters">
+	        <ul class="fMenu"><!--
+	            --><li>
+	                <div class="fType">Fashion</div>
+	                <div class="fName"></div>
+	                <ul class="fSubMenu"><!--
+	                    --><li>Not selected</li><!--
+	                    --><li>Nail the 90s</li><!--
+	                    --><li>Casual style</li><!--
+	                    --><li>New Look</li><!--
+	                    --><li>Sport</li><!--
+	                    --><li>Vintage</li><!--
+	                    --><li>Classical style</li><!--               
+	                --></ul>
+	            </li><!--
+	            --><li>
+	                <div class="fType">Product type</div>
+	                <div class="fName"></div>
+	                <ul class="fSubMenu"><!--
+	                    --><li>Not selected</li><!--
+	                    --><li>Petite</li><!--
+	                    --><li>Coats &amp; Jackets</li><!--
+	                    --><li>Dresses</li><!--
+	                    --><li>Jersey Tops</li><!--
+	                --></ul>
+	            </li><!--
+	            --><li>
+	                <div class="fType">Color</div>
+	                <div class="fName"></div>
+	                <ul class="fSubMenu"><!--
+	                    --><li>Not selected</li><!--
+	                    --><li>Black</li><!--
+	                    --><li>Blue</li><!--
+	                    --><li>Red</li><!--
+	                    --><li>Green</li><!--
+	                    --><li>Golden</li><!--
+	                    --><li>Yellow</li><!--               
+	                --></ul>
+	            </li><!--
+	            --><li>
+	                <div class="fType">Brand</div>
+	                <div class="fName"></div>
+	                <ul class="fSubMenu"><!--
+	                    --><li>Not selected</li><!--
+	                    --><li>Chi Chi London</li><!--
+	                    --><li>Antipodium</li><!--
+	                    --><li>Adidas</li><!--
+	                    --><li>New Balance</li><!--
+	                    --><li>River Island</li><!--
+	                --></ul>
+	            </li><!--
+	            --><li>
+	                <div class="fType">Size</div>
+	                <div class="fName"></div>
+	                <ul class="fSubMenu"><!--
+	                    --><li>Not selected</li><!--
+	                    --><li>UK 2</li><!--
+	                    --><li>UK 18</li><!--
+	                    --><li>UK 18L</li><!--
+	                    --><li>UK 20</li><!--
+	                    --><li>UK 20L</li><!--
+	                    --><li>UK 20S</li><!--           
+	                    --><li>UK 22S</li><!--
+	                    --><li>UK 22</li><!--
+	                --></ul>
+	            </li><!--
+	            --><li>
+	                <div class="fType">Price range</div>
+	                <div class="fName">
+	                    <div class="sPrice clearfix">
+	                        <div class="sBegin"></div>
+	                        <div class="sEnd">&pound;1000.00</div>
+	                    </div>
+	                    <div class="slider">
+	                        <div class="mainTrack">
+	                            <div class="sLeft"></div>
+	                            <div class="subTrack"></div>
+	                            <div class="sRight"></div>
+	                        </div>
+	                    </div>
+	                </div>
+	                <ul></ul>
+	            </li><!--
+	        --></ul>
+	        <div class="stickyFTabletMenu">
+	            <div class="fTabletMenu">
+	                <div class="fTabletMenuList">
+	                    <span class="f1">Casual style</span>,
+	                    <span class="f2">Product type</span>,
+	                    <span class="f3">Color</span>,
+	                    <span class="f4">Brand</span>,
+	                    <span class="f5">Size</span>,
+	                    <span class="f6">Price range</span>
+	                    <span class="arrow"></span>
+	                </div>
+	            <div class="dropDownMenu">
+	                <div class="dDMenuClose"><span class="btnMenuClose"></span></div>
+	                <div class="dDMenuList">
+	                    <div class="dDMenuHead">Drag and select</div>
+	                    <div class="dDMenuItem">
+	                        <div class="dDItemName">Fashion</div>
+	                        <div class="dDItemList">
+	                            <span>Not selected</span>,
+	                            <span>Nail the 90s</span>,
+	                            <span>Casual style</span>,
+	                            <span>New Look</span>,
+	                            <span>Sport</span>,
+	                            <span>Vintage</span>,
+	                            <span>Сlassical style</span>
+	                        </div>
+	                    </div>
+	                    <div class="dDMenuItem">
+	                        <div class="dDItemName">Product type</div>
+	                        <div class="dDItemList">
+	                            <span>Not selected</span>,
+	                            <span>Petite</span>,
+	                            <span>Coats &amp; Jackets</span>,
+	                            <span>Dresses</span>,
+	                            <span>Jersey Tops</span>
+	                        </div>
+	                    </div>
+	                    <div class="dDMenuItem">
+	                        <div class="dDItemName">Color</div>
+	                        <div class="dDItemList">
+	                            <span>Not selected</span>,
+	                            <span>Yellow</span>,
+	                            <span>Black</span>,
+	                            <span>Blue</span>,
+	                            <span>Red</span>,
+	                            <span>Green</span>,
+	                            <span>Golden</span>
+	                        </div>
+	                    </div>
+	                    <div class="dDMenuItem">
+	                        <div class="dDItemName">Brand</div>
+	                        <div class="dDItemList">
+	                            <span>Not selected</span>,
+	                            <span>Chi Chi London</span>,
+	                            <span>Antipodium</span>,
+	                            <span>Adidas</span>,
+	                            <span>New Balance</span>,
+	                            <span>River Island</span>
+	                        </div>
+	                    </div>
+	                    <div class="dDMenuItem">
+	                        <div class="dDItemName">Size</div>
+	                        <div class="dDItemList">
+	                            <span>Not selected</span>,
+	                            <span>UK 2</span>,
+	                            <span>UK 18</span>,
+	                            <span>UK 18L</span>,
+	                            <span>UK 20</span>,
+	                            <span>UK 20L</span>,
+	                            <span>UK 20S</span>,
+	                            <span>UK 22S</span>,
+	                            <span>UK 22</span>
+	                        </div>
+	                    </div>
+	                    <div class="dDMenuItem">
+	                        <div class="dDItemName">Price range</div>
+	                        <div class="dDItemList">
+	                            <span>Not selected</span>,
+	                            <span>To &pound;99</span>,
+	                            <span>&pound;100-&pound;299</span>,
+	                            <span>To &pound;300</span>
+	                        </div>
+	                    </div>
+	                </div>
+	                <div class="dropDownMenuFon"></div>
+	            </div>
+	            </div>
+	        </div>
+	    </section>
+	    <section class="arrivals clearfix">
+	        <div class="arrConteiner clearfix">
+	            <div class="arrItem">
+	                <a href="Only_Skinny_Jeans.html">
+	                    <img src="img/catalog/1.png">
+	                    <div class="quickView">
+	                        Quick view
+	                        <div class="morePhotos">More photos</div>
+	                    </div>
+	                    <div class="itemName">Only Skinny Jeans</div>
+	                    <div class="itemPrice">&pound;65.50</div>
+	                </a>
+	            </div>
+	            <div class="arrItem">
+	                 <a href="Boyfriend_T-Shirt_with_Bohemian_Print.html">
+	                    <img src="img/catalog/2.png">
+	                     <div class="quickView">
+	                        Quick view
+	                        <div class="morePhotos">More photos</div>
+	                    </div>
+	                    <div class="itemName">Boyfriend T-Shirt with Bohemian Print</div>
+	                    <div class=itemPrice>&pound;76.25</div>
+	                </a>
+	            </div>
+	            <div class="arrItem">
+	                <a href="Turtle_Neck_Jumper_in_Rib.html">
+	                    <img src="img/catalog/3.png">
+	                    <div class="quickView">
+	                        Quick view
+	                        <div class="morePhotos">More photos</div>
+	                    </div>
+	                    <div class="itemName">Turtle Neck Jumper in Rib</div>
+	                    <div class="itemPrice">&pound;130.25 <span>New</span></div>
+	                </a>
+	            </div>
+	                <div class="arrItem">
+	                 <a href="item.html">
+	                    <img src="img/catalog/4.png">
+	                     <div class="quickView">
+	                        Quick view
+	                        <div class="morePhotos">More photos</div>
+	                    </div>
+	                    <div class="itemName">With Patchwork Crochet</div>
+	                    <div class="itemPrice">&pound;80.60</div>
+	                </a>
+	            </div>
+	            
+	            
+	                <a href="#" class="aBanner">
+	                <div class="arrbannerTopic">
+	                    Last weekend <span>extra 50%</span> off on all reduced boots and shoulder bags
+	                </div>
+	                <div class="arrbannerInfo">
+	                    This offer is valid in-store and online. Prices displayed reflect this additional discount. This offer ends at 11:59 GMT on March 1st 2015    
+	                </div>
+	                </a>    
+	           
+	            <div class="arrItem">
+	                <a href="item.html">
+	                    <div class="itemShadow">
+	                        <div class="itemShadowName">Levi's</div>
+	                        <div class="itemShadowInfo">Buyer's choice</div>
+	                    </div>
+	                    <img src="img/catalog/5.png">
+	                    <div class="quickView">
+	                        Quick view
+	                        <div class="morePhotos">More photos</div>
+	                    </div>
+	                    <div class="itemName">Levi’s Jeans for women</div>
+	                    <div class="itemPrice"><span>More colours</span></div>
+	                </a>
+	            </div>
+	            <div class="arrItem"> 
+	                <a href="item.html">
+	                    <img src="img/catalog/6.png">
+	                    <div class="quickView">
+	                        Quick view
+	                        <div class="morePhotos">More photos</div>
+	                    </div>
+	                    <div class="itemName">Boyfriend T-Shirt with Bohemian Print</div>
+	                    <div class="itemPrice"><span class="itemPriceOld">&pound;120.00</span> <span>-25%</span>  &pound;90.00</div>
+	                </a>
+	            </div>
+	            <div class="arrItem">
+	                <a href="item.html">
+	                    <img src="img/catalog/7.png">
+	                    <div class="quickView">
+	                        Quick view
+	                        <div class="morePhotos">More photos</div>
+	                    </div>
+	                    <div class="itemName">Colour Block</div>
+	                    <div class="itemPrice">&pound;550.50</div>
+	                </a>
+	            </div>
+	            <div class="arrItem">
+	                <a href="item.html">
+	                    <img src="img/catalog/8.png">
+	                    <div class="quickView">
+	                        Quick view
+	                        <div class="morePhotos">More photos</div>
+	                    </div>
+	                    <div class="itemName">Monki Festval Knitted</div>
+	                    <div class="itemPrice">&pound;24.75</div>
+	                </a>
+	            </div>
+	            <div class="arrItem">
+	                <a href="item.html">
+	                    <img src="img/catalog/9.png">
+	                    <div class="quickView">
+	                        Quick view
+	                        <div class="morePhotos">More photos</div>
+	                    </div>
+	                    <div class="itemName">Oversized Cardigan</div>
+	                    <div class="itemPrice">&pound;90.00</div>
+	                </a>
+	            </div>
+	            <div class="arrItem"> 
+	                <a href="item.html">
+	                    <img src="img/catalog/10.png">
+	                    <div class="quickView">
+	                        Quick view
+	                        <div class="morePhotos">More photos</div>
+	                    </div>
+	                    <div class="itemName">Paul &amp; Joe Sister Jumper with Neon Trims</div>
+	                    <div class="itemPrice">&pound;19.75 <span>New</span></div>
+	                </a>
+	            </div>
+	            <div class="arrItem">
+	                <a href="item.html">
+	                    <div class="quickView">
+	                        Quick view
+	                        <div class="morePhotos">More photos</div>
+	                    </div>
+	                    <img src="img/catalog/11.png">
+	                    <div class="quickView">
+	                        Quick view
+	                        <div class="morePhotos">More photos</div>
+	                    </div>
+	                    <div class="itemName">Only Busted Knee Jean</div>
+	                    <div class="itemPrice">&pound;140.50</div>
+	                </a>
+	            </div>
+	            <div class="arrItem">
+	                <a href="item.html">
+	                    <img src="img/catalog/12.png">
+	                    <div class="quickView">
+	                        Quick view
+	                        <div class="morePhotos">More photos</div>
+	                    </div>
+	                    <div class="itemName">Boyfriend T-Shirt with Bohemian Print</div>
+	                    <div class="itemPrice">&pound;85.75</div>
+	                </a>
+	            </div>
+	        </div>
+	        <div class="showMore">Show more</div>
+	    </section>
+	    <section class="banner">
+	        <div class="banSec1">
+	            <div class="banSec1Slider">
+	                <a href="#" class="banSec1Top1">
+	                    <div class="banSec1Text1">Adidas Blue</div>
+	                    <div class="banSec1Text2">For men</div>
+	                </a>
+	                <a href="#" class="banSec1Top2"></a> 
+	                <a href="#" class="banSec1Top3"></a> 
+	            </div>
+	        </div> 
+	        <div class="banSec2">
+	            <div class="bS2Left"> 
+	                <a href="#">
+	                    <div class="bS2LeftText1">Repair Patches</div>
+	                    <div class="bS2LeftText2">&pound; 150.50</div>
+	                </a>
+	            </div>
+	            <div class="bS2Right">
+	                <a href="#">
+	                    <div class="bS2RightText1">Sale</div>
+	                    <div class="bS2RightText2">-70%</div>
+	                </a>
+	            </div>
+	        </div>
+	    </section>
+	</main>    
+    <footer>
+        <section class="links">
+            <div class="linksLeft">
+                <div class="lLCol1">
+                    <h4 class="linksHead">Quick Links</h4>
+                    <ul class="linksList">
+                        <li><a href="#">Store locator</a></li>
+                        <li><a href="#">Gift cards</a></li>
+                        <li><a href="#">Size guide</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="lLCol2">
+                    <h4 class="linksHead">Customer Care</h4>
+                    <ul class="linksList">
+                        <li><a href="#">Customer service</a></li>
+                        <li><a href="#">Track my order</a></li>
+                        <li><a href="#">Return policy</a></li>
+                        <li><a href="#">Shipping &amp; delivery</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Careers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="linksRight">
+                <div class="lRTop">
+                    <div class="lRTopLeft">
+                        <h4 class="linksHead">Questions</h4>
+                        <div class="lRTopLeftText">
+                            <a href ="#">
+                                Tweet us <span>@template</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lRTopRight">
+                        <h4 class="linksHead">Order by phone</h4>
+                        <div class="lRTopRightText">8-800-409-47-12</div>
+                    </div>
+                </div>
+                <div class="lRMiddle">
+                    We have our own delivery service which operates in 23 major European cities. Delivery time - 3-5 days.
+                </div>
+                <a class="social" href="#">
+                    <img src ="img/start/footer/fb.png">
+                </a>
+                <a class="social" href="#">
+                    <img src="img/start/footer/twB.png">
+                </a>
+            </div>
+        </section>    
+        <section class="down">
+            <div class="copyrate">© 2010–2015, The Template Group inc.</div>
+            <div class="share">
+                Share
+                <div class="shareMind">1 437</div>
+            </div>
+            <ul class="downMenu"><!--
+                --><li><a href="#">Legal notice</a></li><!--
+                --><li><a href="#">Privacy policy</a></li><!--
+                --><li><a href="#">Site map</a></li><!--
+            --></ul>
+        </section>    
+    </footer>
+    <script type="text/javascript" src="js/catalog.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+@font-face {
+    font-family: FuturaPTDemi;
+    src: url('../fonts/OpenSans/OpenSansSemibold.eot');
+    src: url('../fonts/OpenSans/OpenSansSemibold.eot') format('embedded-opentype'),
+         url('../fonts/OpenSans/OpenSansSemibold.woff') format('woff'),
+         url('../fonts/OpenSans/OpenSansSemibold.ttf') format('truetype'),
+         url('../fonts/OpenSans/OpenSansSemibold.svg#OpenSansSemibold') format('svg');
+}
+@font-face {
+    font-family: FuturaPTHeavy;
+    src: url('../fonts/OpenSans/OpenSansExtraBold.eot');
+    src:  url('../fonts/OpenSans/OpenSansExtraBold.eot') format('embedded-opentype'),
+            url('../fonts/OpenSans/OpenSansExtraBold.ttf') format('truetype'),
+         url('../fonts/OpenSans/OpenSansExtraBold.svg#OpenSansExtraBold') format('svg');
+}
+@font-face {
+    font-family: HelveticaNeue;
+    src: url('../fonts/Roboto/RobotoRegular.woff') format('woff'),
+         url('../fonts/Roboto/RobotoRegular.ttf') format('truetype'),
+         url('../fonts/Roboto/RobotoRegular.svg#RobotoRegular') format('svg');
+}
+@font-face {
+    font-family: HelveticaNeueMedium;
+    src: url("../fonts/Roboto/RobotoMedium.ttf")
+}
+@font-face {
+    font-family: HelveticaNeueBold;
+    src: url('../fonts/Roboto/RobotoBold.woff') format('woff'),
+         url('../fonts/Roboto/RobotoBold.ttf') format('truetype'),
+         url('../fonts/Roboto/RobotoBold.svg#RobotoBold') format('svg');
+}
+
+@font-face {
+    font-family: TimesItalic;
+    src: url('../fonts/Crimson/CrimsonTextItalic.woff') format('woff'),
+         url('../fonts/Crimson/CrimsonTextItalic.ttf') format('truetype'),
+         url('../fonts/Crimson/CrimsonTextItalic.svg#CrimsonTextItalic') format('svg');
+}
+
+@font-face {
+    font-family: RobotoBold;
+    src: url('../fonts/Roboto/RobotoBold.woff') format('woff'),
+         url('../fonts/Roboto/RobotoBold.ttf') format('truetype'),
+         url('../fonts/Roboto/RobotoBold.svg#RobotoBold') format('svg');
+} 
+
+@font-face {
+    font-family: RobotoRegular;
+    src: url('../fonts/Roboto/RobotoRegular.woff') format('woff'),
+         url('../fonts/Roboto/RobotoRegular.ttf') format('truetype'),
+         url('f../fonts/Roboto/RobotoRegular.svg#RobotoRegular') format('svg');
+} 
+
+@font-face {
+    font-family: OpenSansSemibold;
+    src: url('../fonts/OpenSans/OpenSansSemibold.eot');
+    src: url('../fonts/OpenSans/OpenSansSemibold.eot') format('embedded-opentype'),
+         url('../fonts/OpenSans/OpenSansSemibold.woff') format('woff'),
+         url('../fonts/OpenSans/OpenSansSemibold.ttf') format('truetype'),
+         url('../fonts/OpenSans/OpenSansSemibold.svg#OpenSansSemibold') format('svg');
+} 
+
+@font-face {
+    font-family: OpenSansBold;
+    src: url('../fonts/OpenSans/OpenSansBold.eot');
+    src: url('../fonts/OpenSans/OpenSansBold.eot') format('embedded-opentype'),
+         url('../fonts/OpenSans/OpenSansBold.woff') format('woff'),
+         url('../fonts/OpenSans/OpenSansBold.ttf') format('truetype'),
+         url('../fonts/OpenSans/OpenSansBold.svg#OpenSansBold') format('svg');
+    
+} 
+
+@font-face {
+    font-family: Myriad;/*
+    src: url('fonts/MyriadProRegular.eot');*/
+    src: url('../fonts/MyriadPro/MyriadProRegular.eot') format('embedded-opentype'),
+         url('../fonts/MyriadPro/MyriadProRegular.woff') format('woff'),
+         url('../fonts/MyriadPro/MyriadProRegular.ttf') format('truetype'),
+         url('../fonts/MyriadPro/MyriadProRegular.svg#MyriadProRegular') format('svg');
+} 

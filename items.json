@@ -1,0 +1,22 @@
+[
+    {
+        "img": "img/catalog/9.png",
+        "name":"Oversized Cardigan",
+        "price":"90.00"
+    },
+    {
+        "img": "img/catalog/8.png",
+        "name":"Monki Festval Knitted",
+        "price":"24.75"
+    },
+    {
+        "img": "img/catalog/11.png",
+        "name":"Only Busted Knee Jean",
+        "price":"140.50"
+    },
+    {
+        "img": "img/catalog/12.png",
+        "name":"Boyfriend T-Shirt with Bohemian Print",
+        "price":"85.75"
+    }
+]

@@ -238,7 +238,7 @@ function sliderAnime() {
     var flag = true; 
     var slider1Timer = setInterval(function () {
         var slider1 = document.body.querySelector(".cC2S1TopSlider");
-        if (parseInt(getComputedStyle(slider1).marginTop)  > slider1.clientHeight * 1/3) {
+        if (- parseInt(getComputedStyle(slider1).marginTop)  > slider1.clientHeight * 1/3) {
             slider1.style.transitionDuration = "0ms"
             slider1.style.marginTop = 0;
         }

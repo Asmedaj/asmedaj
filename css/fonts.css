@@ -6,17 +6,6 @@
          url('../fonts/OpenSans/OpenSansSemibold.ttf') format('truetype'),
          url('../fonts/OpenSans/OpenSansSemibold.svg#OpenSansSemibold') format('svg');
 }
-
-
-@font-face {
-    font-family: OpenSansSemibold;
-    src: url('../fonts/OpenSans/OpenSansSemibold.eot');
-    src: url('../fonts/OpenSans/OpenSansSemibold.eot') format('embedded-opentype'),
-         url('../fonts/OpenSans/OpenSansSemibold.woff') format('woff'),
-         url('../fonts/OpenSans/OpenSansSemibold.ttf') format('truetype'),
-         url('../fonts/OpenSans/OpenSansSemibold.svg#OpenSansSemibold') format('svg');
-} 
-
 @font-face {
     font-family: FuturaPTHeavy;
     src: url('../fonts/OpenSans/OpenSansExtraBold.eot');
@@ -62,7 +51,14 @@
          url('f../fonts/Roboto/RobotoRegular.svg#RobotoRegular') format('svg');
 } 
 
-
+@font-face {
+    font-family: OpenSansSemibold;
+    src: url('../fonts/OpenSans/OpenSansSemibold.eot');
+    src: url('../fonts/OpenSans/OpenSansSemibold.eot') format('embedded-opentype'),
+         url('../fonts/OpenSans/OpenSansSemibold.woff') format('woff'),
+         url('../fonts/OpenSans/OpenSansSemibold.ttf') format('truetype'),
+         url('../fonts/OpenSans/OpenSansSemibold.svg#OpenSansSemibold') format('svg');
+} 
 
 @font-face {
     font-family: OpenSansBold;

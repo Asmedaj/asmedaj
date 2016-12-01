@@ -243,8 +243,9 @@ function sliderAnime() {
             slider1.style.marginTop = 0;
         }
         else {
+
             slider1.style.transitionDuration = "650ms"
-            slider1.style.marginTop = - parseInt(getComputedStyle(slider1).marginTop) - slider1.clientHeight/3 + "px";
+            slider1.style.marginTop = parseInt(getComputedStyle(slider1).marginTop) - slider1.clientHeight/3 + "px";
         }
     }, 3000); 
     var slider2Timer = setInterval(function () {

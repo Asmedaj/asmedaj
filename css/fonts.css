@@ -1,5 +1,18 @@
 
 
+
+@font-face {
+    font-family: HelveticaNeue;
+    src: url('../fonts/Roboto/RobotoRegular.woff') format('woff'),
+         url('../fonts/Roboto/RobotoRegular.ttf') format('truetype'),
+         url('../fonts/Roboto/RobotoRegular.svg#RobotoRegular') format('svg');
+}
+@font-face {
+    font-family: HelveticaNeueMedium;
+    src: url("../fonts/Roboto/RobotoMedium.ttf")
+}
+
+
 @font-face {
     font-family: FuturaPTDemi;
     src: url('../fonts/OpenSans/OpenSansSemibold.eot');
@@ -15,16 +28,9 @@
             url('../fonts/OpenSans/OpenSansExtraBold.ttf') format('truetype'),
          url('../fonts/OpenSans/OpenSansExtraBold.svg#OpenSansExtraBold') format('svg');
 }
-@font-face {
-    font-family: HelveticaNeue;
-    src: url('../fonts/Roboto/RobotoRegular.woff') format('woff'),
-         url('../fonts/Roboto/RobotoRegular.ttf') format('truetype'),
-         url('../fonts/Roboto/RobotoRegular.svg#RobotoRegular') format('svg');
-}
-@font-face {
-    font-family: HelveticaNeueMedium;
-    src: url("../fonts/Roboto/RobotoMedium.ttf")
-}
+
+
+
 @font-face {
     font-family: HelveticaNeueBold;
     src: url('../fonts/Roboto/RobotoBold.woff') format('woff'),

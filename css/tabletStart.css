@@ -71,7 +71,7 @@ h1.logo_tm {
     display: inline-block;
     margin-top: 32px;
     width: 75%;
-    font:.75em HelveticaNeue;
+    font: .75em HelveticaNeue;
     letter-spacing: .03em;
 }
 
@@ -249,7 +249,7 @@ h1.logo_tm {
     color: #f14a58;
 }
 .carCon1BanerText3 {
-    margin-top: 1.15625vw;
+    margin-top: 10.15625vw;
     width: 100%;
     padding-left:6px;
     height: 14px;
@@ -305,10 +305,10 @@ h1.logo_tm {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     padding-top: 4.036458333333333vw;
-    padding-right: 1.91617933723197%;/*56/513*/
+    padding-right: 10.91617933723197%;/*56/513*/
     width: 100%;
     height: 33px;
-    font:1.625em FuturaPTDemi;
+    font: 1.625em FuturaPTDemi;
     letter-spacing: .03em;
     color: #fff;
     text-align: right;
@@ -358,7 +358,7 @@ h1.logo_tm {
     display: block;
     width: 100%;
     height: 32.8125vw;
-    background-image: linear-gradient(to top, rgba(94,102,108,.3),rgba(94,102,108,.3)),url("../img/start/tablet/slide_2/4.png") ;
+    background-image: linear-gradient(to top, rgba(94,102,108,0.3),rgba(94,102,108,0.3)),url("../img/start/tablet/slide_2/4.png") ;
     background-size: 100% 100%;
 }
 
@@ -452,7 +452,7 @@ h1.logo_tm {
 .cC2S2TopText1 {
     padding-top: 21.875vw;
     width: 100%;
-    font:1.625em FuturaPTDemi;
+    font: 1.625em FuturaPTDemi;
     letter-spacing: .03em;
     text-align: center;
 }
@@ -600,7 +600,7 @@ h1.logo_tm {
     position: absolute;
     top: 13.54166666666667vw;
     width: 100%;
-    height: 5.52083333333333vw;
+    height: 50.52083333333333vw;
     background-image: url("../img/start/tablet/3.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -611,7 +611,7 @@ h1.logo_tm {
 .cC3Text1 {
     padding-top: 29.42708333333333vw;  
     width: 100%;
-    height: 3.078125vw;
+    height: 30.078125vw;
     font: 8.125em FuturaPTDemi;
     letter-spacing: .07em;
     color: #fff;
@@ -622,7 +622,7 @@ h1.logo_tm {
     width: 70%;
     margin: 0 auto;
     padding-top: 16.92708333333333vw;
-    font:1.5em/4.427083333333333vw FuturaPTDemi;
+    font: 1.5em/4.427083333333333vw FuturaPTDemi;
     letter-spacing: .03em;
     text-align: center;
 }
@@ -637,7 +637,7 @@ h1.logo_tm {
     margin: 0 auto;
     padding-top: 11px;
     font-family: TimesItalic;
-    letter-spacing: -.006em;
+    letter-spacing: -0.006em;
     line-height: 3.90625vw;
     text-align: center;
 }
@@ -801,7 +801,7 @@ h1.logo_tm {
     display: inline-block;
     height: 100%;
     vertical-align: middle;
-    margin-right: -.25em;
+    margin-right: -0.25em;
 }     
 
 .allArrivals:hover {
@@ -924,7 +924,7 @@ footer {
 .down {
     width: 89.84375%;  /*690*/
     padding: 0 5.078125%; /*39*/
-    height: 1.28645833333333vw;/*79*/
+    height: 10.28645833333333vw;/*79*/
     margin: 0 auto;
     border-top: 1px solid #e5e5e5;
     font-size: .75em;/*12*/
@@ -953,7 +953,7 @@ footer {
    /* float:left;*/
     display:inline-block;
     margin-left: 0;
-    height: 1.28645833333333vw;/*79*/
+    height: 10.28645833333333vw;/*79*/
     width: 16.66666666666667%; /*115*/
     font: 1.5em FuturaPTDemi;
     letter-spacing: .03em;

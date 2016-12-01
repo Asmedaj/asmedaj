@@ -87,7 +87,6 @@
     100% { transform: translateX(0); }
 }  
 .clearfix { display: block; }
-
 .clearfix:after { 
     content: ""; 
     display: block; 
@@ -130,7 +129,7 @@ header {
 }
 
 .stickyHeader {
-    width: 9.76923076923077% !important;
+    width: 90.76923076923077% !important;
     margin: 0 auto;
 }
     
@@ -152,7 +151,7 @@ h1.logo_tm {
     float: right;
     display: inline-block;
     width: 30%;
-    margin-top: 32px;
+    margin-top:32px;
     font: 12px HelveticaNeue;
     letter-spacing: .03em;
     overflow: hidden;
@@ -165,10 +164,10 @@ h1.logo_tm {
 .bagIn {
     float: right;
     display: inline-block;
-    height: 14px;
     margin-left: 54px;
     padding-left: 26px;
     text-align: right;
+    height: 14px;
     background-image: url("../img/start/start_bag.png");
     background-position: left top;
     background-repeat: no-repeat;
@@ -183,7 +182,7 @@ h1.logo_tm {
 .mainMenu {
     display: block !important;
     float: left;
-    width: 105.2px; /*1060/1180*/
+    width: 1050.2px; /*1060/1180*/
     list-style-type: none;
     font: 14px FuturaPTDemi;
     letter-spacing: .03em;
@@ -239,7 +238,7 @@ h1.logo_tm {
     margin-top: -3px;
     padding-right:15px;
     padding-bottom: 5px;
-    font:12px FuturaPTDemi;
+    font: 12px FuturaPTDemi;
     letter-spacing: .03em;
     color: #a8a8a8;
     text-align: left;
@@ -352,7 +351,7 @@ h1.logo_tm {
     position: relative;
     margin-top: 96px;
     width: 100%;
-    font:16px/12px HelveticaNeue;
+    font: 16px/12px HelveticaNeue;
     letter-spacing: .03em;
     text-align: center;
 }
@@ -403,9 +402,9 @@ h1.logo_tm {
     padding-right: 12.17257318952234%;
     width: 87.82742681047766%;
     height: 33px;
-    font:30px FuturaPTDemi;
+    font: 30px FuturaPTDemi;
     letter-spacing: .03em;
-    color: #ffffff;
+    color: #fff;
     text-align: right;
 }
 
@@ -415,7 +414,7 @@ h1.logo_tm {
     margin-right: 12.17257318952234%;
     width: 25.42372881355932%; /*165*/
     height: 16px;
-    font:16px TimesItalic;
+    font: 16px TimesItalic;
     letter-spacing: 0em;
     color: #fff;  
     text-align: center;
@@ -451,7 +450,7 @@ h1.logo_tm {
     display: block;
     width: 100%;
     height: 385px;
-    background-image: linear-gradient(to top, rgba(94,102,108,.3),rgba(94,102,108,.3)),url("../img/start/slide_2/4.png") ;
+    background-image: linear-gradient(to top, rgba(94,102,108,0.3),rgba(94,102,108,0.3)),url("../img/start/slide_2/4.png") ;
     background-size: 100% 100%;
 }
 
@@ -503,7 +502,7 @@ h1.logo_tm {
     margin-top: 9px;
     width: 100%;
     height: 14px;
-    font:16px TimesItalic;
+    font: 16px TimesItalic;
     letter-spacing: 0em;
     color: #757575;
     text-align: center;
@@ -534,7 +533,7 @@ h1.logo_tm {
 .cC2S2TopText1 {
     padding-top: 276px;
     width: 100%;
-    font:30px FuturaPTDemi;
+    font: 30px FuturaPTDemi;
     letter-spacing: .03em;
     text-align: center;
 }
@@ -542,7 +541,7 @@ h1.logo_tm {
 .cC2S2TopText2 {
     padding-top: 12px;
     width: 100%;
-    font:16px TimesItalic;
+    font: 16px TimesItalic;
     letter-spacing: 0em;
     color: #757575;
     text-align: center;
@@ -578,7 +577,7 @@ h1.logo_tm {
     padding-top: 124px;
     width: 90%;
     height: 60px;
-    font:22px/32px FuturaPTDemi;
+    font: 22px/32px FuturaPTDemi;
     letter-spacing: .03em;
     text-align: center;
 }
@@ -592,7 +591,7 @@ h1.logo_tm {
     padding-top: 17px;
     width: 60%;
     height: 57px;
-    font:16px/30px TimesItalic;
+    font: 16px/30px TimesItalic;
     letter-spacing: 0em;
     color: #000;
     text-align: center;
@@ -608,7 +607,7 @@ h1.logo_tm {
     padding-top: 276px;
     width: 100%;
     height: 33px;
-    font:30px FuturaPTDemi;
+    font: 30px FuturaPTDemi;
     letter-spacing: .03em;
     color: #fff;
     text-align: center;
@@ -618,7 +617,7 @@ h1.logo_tm {
     padding-top: 10px;
     width: 100%;
     height: 57px;
-    font:16px TimesItalic;
+    font:  16px TimesItalic;
     letter-spacing: 0em;
     color: #fff;
     text-align: center;
@@ -643,7 +642,7 @@ h1.logo_tm {
     padding-top: 62px;
     width: 100%;
     height: 25px;
-    font:30px FuturaPTDemi;
+    font: 30px FuturaPTDemi;
     letter-spacing: .03em;
     text-align: center;
 }
@@ -691,7 +690,7 @@ h1.logo_tm {
     padding-top: 238px;  
     width: 100%;
     height: 231px;
-    font:210px FuturaPTDemi;
+    font: 210px FuturaPTDemi;
     letter-spacing: .07em;
     color: #fff;
     text-align: center;
@@ -701,7 +700,7 @@ h1.logo_tm {
     padding-top: 186px;
     width: 100%;
     height: 31px;
-    font:26px FuturaPTDemi;
+    font: 26px  FuturaPTDemi;
     letter-spacing: .03em;
     text-align: center;
 }
@@ -714,8 +713,8 @@ h1.logo_tm {
     padding-top: 17px;
     width: 100%;
     height: 23px;
-    font:16px TimesItalic;
-    letter-spacing: -.006em;
+    font: 16px TimesItalic;
+    letter-spacing: -0.006em;
     text-align: center;
 }
  
@@ -749,7 +748,7 @@ h1.logo_tm {
     padding-top: 63px;
     width: 50%;
     height: 33px;
-    font:30px FuturaPTDemi;
+    font: 30px FuturaPTDemi;
     letter-spacing: .03em;
     text-align: center;
 }
@@ -780,9 +779,9 @@ h1.logo_tm {
     float: right;
     padding-top: 62px;
     margin-right: 9.230769230769231%;
-    width: 4.76923076923077%;
+    width: 40.76923076923077%;
     height: 33px;
-    font:30px FuturaPTDemi;
+    font: 30px FuturaPTDemi;
     letter-spacing: .03em;
     text-align: center;
 }
@@ -791,9 +790,9 @@ h1.logo_tm {
     float: right;
     padding-top: 9px;
     margin-right: 9.230769230769231%;
-    width: 4.76923076923077%;
+    width: 40.76923076923077%;
     height: 16px;
-    font:16px TimesItalic;
+    font: 16px TimesItalic;
     letter-spacing: 0em;
     color: #757575;
     text-align: center;
@@ -818,21 +817,21 @@ h1.logo_tm {
     height: 65px;
     margin-bottom: 85px;
     padding-top: 130px;
-    font:60px FuturaPTDemi;
+    font: 60px FuturaPTDemi;
     letter-spacing: .022em;
     color: #000;
     text-align: center;    
 }
 
 .arrConteiner {
-    width: 9.76923076923077%;
+    width: 90.76923076923077%;
    /* height: 460px;*/
     margin: 0 4.615384615384615%; /*60*/
 }
 
 .arrItem {
     float: left;
-    width: 2.33898305084746%; /*240*/
+    width: 20.33898305084746%; /*240*/
     height: 433px;
     margin-right: 6.214689265536723%;
     margin-bottom: 50px;
@@ -860,7 +859,7 @@ h1.logo_tm {
     width: 70%;
     margin: 0 15%;
     margin-top: -11px;
-    font:14px/65px HelveticaNeue;
+    font: 14px/65px HelveticaNeue;
     letter-spacing: .03em;
     text-align: center;
 }
@@ -872,7 +871,7 @@ h1.logo_tm {
     margin: 0 auto;
     margin-top: 73px;
     margin-bottom: 79px;
-    font:26px FuturaPTDemi;
+    font: 26px  FuturaPTDemi;
     letter-spacing: .03em;
     text-align: center;
     cursor: pointer;
@@ -891,7 +890,7 @@ h1.logo_tm {
     display: inline-block;
     height: 100%;
     vertical-align: middle;
-    margin-right: -.25em;
+    margin-right: -0.25em;
 }    
 
 .allArrivals:hover {
@@ -931,7 +930,7 @@ footer {
 
 .lLCol1 {
     float: left;
-    width: 4.83204930662558%; /*265*/
+    width: 40.83204930662558%; /*265*/
     height: 448px;
     padding-left: 9.244992295839753%;
 }
@@ -994,7 +993,7 @@ footer {
 }
 
 .lRTopRightText {
-    font:14px/10px HelveticaNeue;
+    font: 14px/10px HelveticaNeue;
     letter-spacing: .03em;
 }
 
@@ -1002,8 +1001,8 @@ footer {
     width: 51.69491525423729%;/*305/590*/
     margin-top: 18px;
     margin-bottom: 37px;
-    font:16px/30px TimesItalic;
-    letter-spacing: -.005em;
+    font: 16px/30px TimesItalic;
+    letter-spacing: -0.005em;
     color: #757575;
 }
 
@@ -1013,7 +1012,7 @@ footer {
 }
 
 .down {
-    width: 9.76923076923077%;
+    width: 90.76923076923077%;
     height: 80px;
     margin: 0 auto;
 }
@@ -1022,7 +1021,7 @@ footer {
     float: left;
     width: 26%;/*260*/
     height: 100%;
-    font:12px HelveticaNeueBold;
+    font: 12px HelveticaNeueBold;
     letter-spacing: .03em;
     color: #000;    
 }
@@ -1038,7 +1037,7 @@ footer {
     margin-left: 19.5%; /*303*/
     width: 13%;
     height: 100%;
-    font:18px FuturaPTDemi;
+    font: 18px FuturaPTDemi;
     letter-spacing: .03em;
 }
     
@@ -1055,7 +1054,7 @@ footer {
     padding-top:10px;
     height: 21px;
     padding-left: 9px;
-    font:12px HelveticaNeue;
+    font: 12px HelveticaNeue;
     letter-spacing: .03em;
     background-image: url("../img/start/footer/share.png");
     background-repeat: no-repeat;
@@ -1080,7 +1079,8 @@ footer {
     display: inline-block;
     margin-left: 9.4%;  /*40/332/1180*/
     margin-top: 7px;
-    font:12px HelveticaNeueBold;
+    font-family: HelveticaNeueBold;
+    font-size: 12px;
     letter-spacing: .03em;
 }
    
@@ -1090,7 +1090,7 @@ footer {
 @media (min-width:1025px) and (max-width:1300px) { 
 
 .mainMenu {
-    width: 79vw; /*105.2/1180*/
+    width: 79vw; /*1050.2/1180*/
 }
 
 .mainMenu li {
@@ -1118,7 +1118,7 @@ footer {
 }
 
 .carCon1Baner {
-    height: 4.38461538461538vw;
+    height: 40.38461538461538vw;
     margin-top: 9.461538461538462vw;
 }
 

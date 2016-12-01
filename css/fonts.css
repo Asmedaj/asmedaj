@@ -15,10 +15,10 @@
 
 @font-face {
     font-family: FuturaPTDemi;
-    src: url('../fonts/OpenSans/OpenSansSemibold.eot');
-    src: url('../fonts/OpenSans/OpenSansSemibold.eot') format('embedded-opentype'),
-         url('../fonts/OpenSans/OpenSansSemibold.woff') format('woff'),
-         url('../fonts/OpenSans/OpenSansSemibold.ttf') format('truetype'),
+    src: url('../fonts/OpenSans/bold.eot');
+    src: url('../fonts/OpenSans/bold.eot') format('embedded-opentype'),
+         url('../fonts/OpenSans/bold.woff') format('woff'),
+         url('../fonts/OpenSans/bold.ttf') format('truetype'),
          url('../fonts/OpenSans/OpenSansSemibold.svg#OpenSansSemibold') format('svg');
 }
 @font-face {
@@ -61,10 +61,10 @@
 
 @font-face {
     font-family: OpenSansSemibold;
-    src: url('../fonts/OpenSans/OpenSansSemibold.eot');
-    src: url('../fonts/OpenSans/OpenSansSemibold.eot') format('embedded-opentype'),
-         url('../fonts/OpenSans/OpenSansSemibold.woff') format('woff'),
-         url('../fonts/OpenSans/OpenSansSemibold.ttf') format('truetype'),
+    src: url('../fonts/OpenSans/bold.eot?');
+    src: url('../fonts/OpenSans/bold.eot?') format('embedded-opentype'),
+         url('../fonts/OpenSans/bold.woff') format('woff'),
+         url('../fonts/OpenSans/bold.ttf') format('truetype'),
          url('../fonts/OpenSans/OpenSansSemibold.svg#OpenSansSemibold') format('svg');
 } 
 

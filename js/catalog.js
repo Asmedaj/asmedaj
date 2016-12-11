@@ -23,7 +23,7 @@ window.addEventListener("resize",PriceTrackBarOnResize, false);
 
 /* CHANGE TOPIC ON RESIZE */ 
 function changeTopic() {
-    var topic = document.body.querySelector(".logo_tm a");
+    var topic = document.body.querySelector(".logo a");
     if (document.body.clientWidth < 480) {
         if(topic.innerHTML != "TL")
             topic.innerHTML = "TL";
@@ -38,20 +38,20 @@ function changeTopic() {
 /*FIX MAIN MENU AN FILTER SIZE */ 
 function stickyMenuSize() {
     if(document.body.clientWidth < 480) {
-        document.body.querySelector(".stickyHeader").style.width = getComputedStyle(document.body.querySelector("header")).width;
+        document.body.querySelector(".sticky-header").style.width = getComputedStyle(document.body.querySelector("header")).width;
     }
-    document.body.querySelector(".stickyFTabletMenu").style.width = getComputedStyle(document.body.querySelector(".filters")).width;
+    document.body.querySelector(".sticky__tablet-menu").style.width = getComputedStyle(document.body.querySelector(".filters")).width;
 }
 
 /* CHANGE DOWN MENU ON RESIZE */
 function changeDownMenu () {
     if (document.body.clientWidth < 480) {
-        if (document.body.querySelector(".down").firstElementChild != document.body.querySelector(".downMenu") ) {
+        if (document.body.querySelector(".down").firstElementChild != document.body.querySelector(".down__menu") ) {
             prepeareForMobile();    
         }
     }
     else {
-        if (document.body.querySelector(".down").firstElementChild == document.body.querySelector(".downMenu") ) {
+        if (document.body.querySelector(".down").firstElementChild == document.body.querySelector(".down__menu") ) {
             returnFromMobile();    
         }
         
@@ -61,7 +61,7 @@ function changeDownMenu () {
 /* CHANGE DOWN MENU ON LOAD */
 function prepeareForMobile () {
     if (document.body.clientWidth < 480) {
-        var downMenu = document.body.querySelector(".downMenu");
+        var downMenu = document.body.querySelector(".down__menu");
         var parent = downMenu.parentElement;
         var social = document.body.querySelectorAll(".social");
         parent.removeChild(downMenu);
@@ -70,7 +70,7 @@ function prepeareForMobile () {
         socialParent.removeChild(social[0]);
         socialParent.removeChild(social[1]);
         var end = document.createElement("div");
-        end.className = "socialAround";
+        end.className = "social-around";
         end.appendChild(social[0]);
         end.appendChild(social[1]);
         parent.insertBefore(end, parent.firstElementChild.nextElementSibling);
@@ -81,13 +81,13 @@ function prepeareForMobile () {
 function returnFromMobile() {
     if (document.body.clientWidth >= 480) {
         var down = document.body.querySelector(".down");
-        var downMenu = document.body.querySelector(".downMenu");
+        var downMenu = document.body.querySelector(".down__menu");
         var parent = downMenu.parentElement;
         var social = document.body.querySelectorAll(".social");
-        var end = document.body.querySelectorAll(".socialAround");
+        var end = document.body.querySelectorAll(".social-around");
         downMenu.parentElement.removeChild(downMenu);
         down.appendChild(downMenu);
-        var linksRight = document.body.querySelector(".linksRight");
+        var linksRight = document.body.querySelector(".links .right");
         linksRight.appendChild(social[0]);
         linksRight.appendChild(social[1]);
         down.removeChild(down.firstElementChild);
@@ -97,15 +97,15 @@ function returnFromMobile() {
 
 /* MOBILE MENU SHOW */
 function mobileMenu() {
-    var btnMainMenu = document.body.querySelector(".mainNav");
-    var closeMainMenu = document.body.querySelector(".closeMainMenu");
+    var btnMainMenu = document.body.querySelector(".main-nav");
+    var closeMainMenu = document.body.querySelector(".close-main-menu");
 // mobile menu show
     btnMainMenu.onclick = function (e) {
         if (this === e.target) {
             if (document.body.clientWidth < 480) {
-                var closeMainMenu = document.body.querySelector(".closeMainMenu");
-                var mainMenu = document.body.querySelector(".mainMenu");
-                var searchAround = document.body.querySelector(".searchAround");
+                var closeMainMenu = document.body.querySelector(".close-main-menu");
+                var mainMenu = document.body.querySelector(".main-menu");
+                var searchAround = document.body.querySelector(".search-around");
                 this.style.position = "absolute";
                 this.style.width = "100%";
                 this.style.zIndex = "3035";
@@ -121,8 +121,8 @@ function mobileMenu() {
     }
 // mobile menu close
     closeMainMenu.onclick = function () {
-        var mainMenu = document.body.querySelector(".mainMenu");
-        var searchAround = document.body.querySelector(".searchAround");
+        var mainMenu = document.body.querySelector(".main-menu");
+        var searchAround = document.body.querySelector(".search-around");
         btnMainMenu.style.cssText = "";
         mainMenu.style.display = "none";
         searchAround.style.display = "none";
@@ -132,8 +132,8 @@ function mobileMenu() {
 
 /* SEARCH FOR TABLET */
 function prepeareTabletSearch() {
-    var btnSearch = document.querySelector(".btnSearch");
-    var search = document.querySelector(".tabletSearch");
+    var btnSearch = document.querySelector(".btn-search");
+    var search = document.querySelector(".tablet-search");
 // on focus    
     btnSearch.onclick = function() {
         this.style.display = "none";
@@ -155,12 +155,14 @@ function prepeareTabletSearch() {
             btnSearch.style.display = "block";
         }    
     }
+    
+    
 }
 
 /* STICKY FOR FILTERS */
 function filterSticky() {
     var sticky = document.querySelector(".filters");
-    var child = document.querySelector(".stickyFTabletMenu");  
+    var child = document.querySelector(".sticky__tablet-menu");  
     window.addEventListener("scroll", stickyScroll, false);
     document.body.addEventListener("scroll", stickyScroll, false); 
     function stickyScroll() {
@@ -178,8 +180,8 @@ function filterSticky() {
 
 /* FILTER FOR TABLET */
 function createFilterForTablet() {
-    var fTabletMenuList = document.body.querySelector(".fTabletMenuList");
-    var dropDownMenu = document.body.querySelector(".dropDownMenu");
+    var fTabletMenuList = document.body.querySelector(".tablet-menu__list");
+    var dropDownMenu = document.body.querySelector(".drop-down-menu");
 // show filter
     fTabletMenuList.onclick = function () {
         this.lastElementChild.style.display = "none";
@@ -193,7 +195,7 @@ function createFilterForTablet() {
         fTabletMenuList.lastElementChild.style.display = "inline-block";
     }
 // filter choose
-    var spanList = document.body.querySelectorAll(".dDItemList span");
+    var spanList = document.body.querySelectorAll(".drop-down-menu .item__list span");
 //flag for click not down
     var flag;
     for (var i =0, n = spanList.length; i < n; i++) {
@@ -249,8 +251,8 @@ function createFilterForTablet() {
         }
     }
 // filter strip move
-    var stripList = dropDownMenu.querySelectorAll(".dDItemList");
-    var stripConteiner = dropDownMenu.querySelector(".dDMenuList");
+    var stripList = dropDownMenu.querySelectorAll(".item__list");
+    var stripConteiner = dropDownMenu.querySelector(".drop-down-menu .list");
     for (var i =0, n = stripList.length; i < n; i++) {
         stripList[i].onmousedown = function (e) {
             flag = false;
@@ -318,8 +320,8 @@ function createFilterForTablet() {
 
 /* BANNER MOVE FOR DIFFERENT SIZE */
 function bannerMove() {
-    var ban = document.body.querySelector(".aBanner");
-    var parent = document.body.querySelector(".arrConteiner"); 
+    var ban = document.body.querySelector(".arrivals__banner");
+    var parent = document.body.querySelector(".arrivals .conteiner"); 
     if (document.body.clientWidth < 1025 && document.body.clientWidth >= 480 ) {
         var test = parent.firstElementChild;
         test = test.nextElementSibling.nextElementSibling.nextElementSibling;
@@ -355,11 +357,11 @@ function bannerMove() {
 
 /* MAIN MENU ACTIVE COLOR */
 function mainMenuActiveColor() {
-    var mainMenu = document.body.querySelectorAll(".mainMenu li a");
+    var mainMenu = document.body.querySelectorAll(".main-menu li a");
     for (var i =0, n = mainMenu.length; i < n; i++) {
         mainMenu[i].onclick = function () {
             for (var j =0, k = mainMenu.length; j < k; j++) {
-                mainMenu[j].style.color = "#000000";
+                mainMenu[j].style.color = "#000";
             }
             this.style.color = "#f14a58";
         }
@@ -368,20 +370,20 @@ function mainMenuActiveColor() {
 
 /*ON ITEM HOVER*/
 function onItemHover() {
-    var itemList = document.body.querySelectorAll(".arrItem a img");
+    var itemList = document.body.querySelectorAll(".arrivals__item a img");
     for (var i =0, n = itemList.length; i < n; i++) {
         itemList[i].onmouseenter = function () {
             this.nextElementSibling.style.height = getComputedStyle(this).height;
             this.nextElementSibling.style.display = "block";
         }
     }
-    var itemShadow = document.body.querySelector(".itemShadow");
+    var itemShadow = document.body.querySelector(".shadow");
     itemShadow.onmouseenter = function () {
         this.nextElementSibling.nextElementSibling.style.height = getComputedStyle(this).height;
         this.nextElementSibling.nextElementSibling.style.display = "block";
     }
 // on blur    
-    var popList = document.body.querySelectorAll(".quickView");
+    var popList = document.body.querySelectorAll(".quick-view");
     for (var i =0, n = popList.length; i < n; i++) {
         popList[i].onmouseleave = function () {
             this.style.display = "none";
@@ -391,7 +393,7 @@ function onItemHover() {
 
 /* ON DESK FILTER HOVER */
 function createDeskFilter() {
-    var mainMenuList = document.body.querySelectorAll(".fMenu >li");
+    var mainMenuList = document.body.querySelectorAll(".filters__menu >li");
 // change background    
     for (var i =0, n = mainMenuList.length - 1; i < n; i++) {
         mainMenuList[i].onmouseenter = function () {
@@ -408,7 +410,7 @@ function createDeskFilter() {
         }
     }
 // on choose filter  
-    var subMenuList = document.body.querySelectorAll(".fSubMenu >li");
+    var subMenuList = document.body.querySelectorAll(".filters__sub-menu >li");
     for (var i =0, n = subMenuList.length; i < n; i++) {
         subMenuList[i].onclick = function () {
             var Parent = this.parentElement;
@@ -436,7 +438,7 @@ function createDeskFilter() {
 
 /* PRICE TRACKBAR */
 function createPriceTrackBar() {
-    var mainMenuList = document.body.querySelectorAll(".fMenu >li");
+    var mainMenuList = document.body.querySelectorAll(".filters__menu >li");
 //show
     mainMenuList[mainMenuList.length - 1].onmouseenter = function () {
         this.style.backgroundColor = "#ffffff";
@@ -448,12 +450,12 @@ function createPriceTrackBar() {
         this.firstElementChild.nextElementSibling.style.opacity = "0";
     }
 //trackbar mooving    
-    var mainTrack = document.body.querySelector(".mainTrack");
-    var left = document.body.querySelector(".sLeft");
-    var subTrack = document.body.querySelector(".subTrack");
-    var right = document.body.querySelector(".sRight");
-    var begin = document.body.querySelector(".sBegin");
-    var end = document.body.querySelector(".sEnd");
+    var mainTrack = document.body.querySelector(".main-track");
+    var left = document.body.querySelector(".price-slider .left");
+    var subTrack = document.body.querySelector(".sub-track");
+    var right = document.body.querySelector(".price-slider .right");
+    var begin = document.body.querySelector(".price__begin");
+    var end = document.body.querySelector(".price__end");
 // left bar    
     left.onmousedown = function (e) {
         var leftCoord = getCoords(this);
@@ -514,7 +516,7 @@ function createPriceTrackBar() {
     }
     
     right.style.left = (mainTrack.clientWidth - 3) +"px"; 
-    var sBegin = document.body.querySelector(".sBegin");
+    var sBegin = document.body.querySelector(".price__begin");
     sBegin.innerHTML = "&pound; 0.00"
     
     function getCoords(elem) { 
@@ -527,14 +529,14 @@ function createPriceTrackBar() {
 }
 
 function PriceTrackBarOnResize() {
-    var sBegin = document.body.querySelector(".sBegin").innerHTML;
+    var sBegin = document.body.querySelector(".price__begin").innerHTML;
     sBegin = sBegin.substr(1, sBegin.length - 3);
-    var sEnd = document.body.querySelector(".sEnd").innerHTML; 
+    var sEnd = document.body.querySelector(".price__end").innerHTML; 
     sEnd = sEnd.substr(1, sEnd.length - 3);
-    var left = document.body.querySelector(".sLeft");
-    var subTrack = document.body.querySelector(".subTrack");
-    var right = document.body.querySelector(".sRight");
-    var mainTrack = document.body.querySelector(".mainTrack");
+    var left = document.body.querySelector(".price-slider .left");
+    var subTrack = document.body.querySelector(".sub-track");
+    var right = document.body.querySelector(".price-slider .right");
+    var mainTrack = document.body.querySelector(".main-track");
     left.style.left = Math.round( sBegin/(1000/(mainTrack.clientWidth)) - 3) + "px";
     right.style.left = Math.round(sEnd/(1000/(mainTrack.clientWidth - 3))) + "px";
     subTrack.style.left = left.style.left;
@@ -545,8 +547,10 @@ function PriceTrackBarOnResize() {
 
 /* LOAD DATA TO TOP BAG */
 function LoadTopBagData() {
+    var bag = null;
+    if(localStorage.getItem("bag") != null)
     var bag = JSON.parse(localStorage.getItem("bag"));
-    var topBag = document.body.querySelector(".bagIn");
+    var topBag = document.body.querySelector(".bag");
     //if bag not empty    
     if (bag != null) {
         var sumQuan = getSummQuant(bag);
@@ -574,25 +578,26 @@ function getSummQuant(baggins) {
 function sliderAnime() {
     var flag = true; 
     var slider1Timer = setInterval(function () {
-        var slider1 = document.body.querySelector(".banSec1Slider");
+        var slider1 = document.body.querySelector(".section-1 .slider");
         if (- parseInt(getComputedStyle(slider1).marginTop)  > slider1.clientHeight * 1/3) {
             slider1.style.transitionDuration = "0ms"
             slider1.style.marginTop = 0;
         }
         else {
             slider1.style.transitionDuration = "650ms"
-            slider1.style.marginTop = parseInt(getComputedStyle(slider1).marginTop)  - slider1.clientHeight/3 + "px";
+            slider1.style.marginTop = parseInt(getComputedStyle(slider1).marginTop) - slider1.clientHeight/3 + "px";
         }
     }, 3000); 
     var slider2Timer = setInterval(function () {
 // Part 4 with bags 
-        var slider2 = document.body.querySelector(".bS2Right a");
+        var slider2 = document.body.querySelector(".section-2 .right a");
         flag = !flag;
         if (flag == true)
             slider2.style.backgroundImage = 'url("img/start/slide_2/5_1.png")';
         else
             slider2.style.backgroundImage = 'url("img/start/slide_2/5_2.png")'; 
     }, 1000); 
+
 }
 
 
@@ -615,7 +620,7 @@ function getXmlHttp() {
   } 
 
 function addMoreItems() {
-    var showMore = document.body.querySelector(".showMore");
+    var showMore = document.body.querySelector(".show-more");
     showMore.onclick = function () {
         var xmlhttp = getXmlHttp(); 
         xmlhttp.open('GET', 'items.json', true); 
@@ -626,19 +631,19 @@ function addMoreItems() {
                     var list = JSON.parse(xmlhttp.responseText);
                         for (var i = 0, n = list.length; i < n; i++){
                             var arrItem = document.createElement("div");
-                            arrItem.className = "arrItem";
+                            arrItem.className = "arrivals__item";
                             var a = document.createElement("a");
                             a.href = "item.html";
                             var img = document.createElement("img");
                             img.src = list[i]["img"];
                             var quickView = document.createElement("div");
-                            quickView.className = "quickView";
+                            quickView.className = "quick-view";
                             var morePhotos = document.createElement("div");
-                            morePhotos.className = "morePhotos";
+                            morePhotos.className = "more-photos";
                             var itemName = document.createElement("div");
-                            itemName.className = "itemName";
+                            itemName.className = "name";
                             var itemPrice = document.createElement("div");
-                            itemPrice.className = "itemPrice";
+                            itemPrice.className = "price";
                             //compile
                             itemPrice.innerHTML = "&pound; " + list[i]["price"];
                             itemName.innerHTML = list[i]["name"];
@@ -650,10 +655,10 @@ function addMoreItems() {
                             a.appendChild(itemName);
                             a.appendChild(itemPrice);
                             arrItem.appendChild(a);
-                            var arrConteiner = document.body.querySelector(".arrConteiner");
+                            var arrConteiner = document.body.querySelector(".conteiner");
                             arrConteiner.appendChild(arrItem);
                         }
-                        var arrItemList = document.body.querySelectorAll(".arrItem");
+                        var arrItemList = document.body.querySelectorAll(".arrivals__item");
                         for (var i = 0, n = arrItemList.length; i < n; i++){
                             arrItemList[i].style.display = "block";
                         }

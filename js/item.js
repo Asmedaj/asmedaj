@@ -17,7 +17,7 @@ window.addEventListener("resize",changeTopic, false);
 
 /* CHANGE TOPIC ON RESIZE */ 
 function changeTopic() {
-    var topic = document.body.querySelector(".logo_tm a");
+    var topic = document.body.querySelector(".logo a");
     if (document.body.clientWidth < 480) {
         if(topic.innerHTML != "TL")
             topic.innerHTML = "TL";
@@ -32,19 +32,19 @@ function changeTopic() {
 /*FIX MAIN MENU SIZE */ 
 function stickyMenuSize() {
     if(document.body.clientWidth < 480) {
-        document.body.querySelector(".stickyHeader").style.width = getComputedStyle(document.body.querySelector("header")).width;
+        document.body.querySelector(".sticky-header").style.width = getComputedStyle(document.body.querySelector("header")).width;
     }
 }
 
 /* CHANGE DOWN MENU ON RESIZE */
 function changeDownMenu () {
     if (document.body.clientWidth < 480) {
-        if (document.body.querySelector(".down").firstElementChild != document.body.querySelector(".downMenu") ) {
+        if (document.body.querySelector(".down").firstElementChild != document.body.querySelector(".down__menu") ) {
             prepeareForMobile();    
         }
     }
     else {
-        if (document.body.querySelector(".down").firstElementChild == document.body.querySelector(".downMenu") ) {
+        if (document.body.querySelector(".down").firstElementChild == document.body.querySelector(".down__menu") ) {
             returnFromMobile();    
         }
         
@@ -54,7 +54,7 @@ function changeDownMenu () {
 /* CHANGE DOWN MENU ON LOAD */
 function prepeareForMobile () {
     if (document.body.clientWidth < 480) {
-        var downMenu = document.body.querySelector(".downMenu");
+        var downMenu = document.body.querySelector(".down__menu");
         var parent = downMenu.parentElement;
         var social = document.body.querySelectorAll(".social");
         parent.removeChild(downMenu);
@@ -63,7 +63,7 @@ function prepeareForMobile () {
         socialParent.removeChild(social[0]);
         socialParent.removeChild(social[1]);
         var end = document.createElement("div");
-        end.className = "socialAround";
+        end.className = "social-around";
         end.appendChild(social[0]);
         end.appendChild(social[1]);
         parent.insertBefore(end, parent.firstElementChild.nextElementSibling);
@@ -74,13 +74,13 @@ function prepeareForMobile () {
 function returnFromMobile() {
     if (document.body.clientWidth >= 480) {
         var down = document.body.querySelector(".down");
-        var downMenu = document.body.querySelector(".downMenu");
+        var downMenu = document.body.querySelector(".down__menu");
         var parent = downMenu.parentElement;
         var social = document.body.querySelectorAll(".social");
-        var end = document.body.querySelectorAll(".socialAround");
+        var end = document.body.querySelectorAll(".social-around");
         downMenu.parentElement.removeChild(downMenu);
         down.appendChild(downMenu);
-        var linksRight = document.body.querySelector(".linksRight");
+        var linksRight = document.body.querySelector(".links .right");
         linksRight.appendChild(social[0]);
         linksRight.appendChild(social[1]);
         down.removeChild(down.firstElementChild);
@@ -90,15 +90,15 @@ function returnFromMobile() {
 
 /* MOBILE MENU SHOW */
 function mobileMenu() {
-    var btnMainMenu = document.body.querySelector(".mainNav");
-    var closeMainMenu = document.body.querySelector(".closeMainMenu");
+    var btnMainMenu = document.body.querySelector(".main-nav");
+    var closeMainMenu = document.body.querySelector(".close-main-menu");
 // mobile menu show
     btnMainMenu.onclick = function (e) {
         if (this === e.target) {
             if (document.body.clientWidth < 480) {
-                var closeMainMenu = document.body.querySelector(".closeMainMenu");
-                var mainMenu = document.body.querySelector(".mainMenu");
-                var searchAround = document.body.querySelector(".searchAround");
+                var closeMainMenu = document.body.querySelector(".close-main-menu");
+                var mainMenu = document.body.querySelector(".main-menu");
+                var searchAround = document.body.querySelector(".search-around");
                 this.style.position = "absolute";
                 this.style.width = "100%";
                 this.style.zIndex = "3035";
@@ -114,8 +114,8 @@ function mobileMenu() {
     }
 // mobile menu close
     closeMainMenu.onclick = function () {
-        var mainMenu = document.body.querySelector(".mainMenu");
-        var searchAround = document.body.querySelector(".searchAround");
+        var mainMenu = document.body.querySelector(".main-menu");
+        var searchAround = document.body.querySelector(".search-around");
         btnMainMenu.style.cssText = "";
         mainMenu.style.display = "none";
         searchAround.style.display = "none";
@@ -123,10 +123,11 @@ function mobileMenu() {
     }
 }
 
+
 /* SEARCH FOR TABLET */
 function prepeareTabletSearch() {
-    var btnSearch = document.querySelector(".btnSearch");
-    var search = document.querySelector(".tabletSearch");
+    var btnSearch = document.querySelector(".btn-search");
+    var search = document.querySelector(".tablet-search");
 // on focus    
     btnSearch.onclick = function() {
         this.style.display = "none";
@@ -148,15 +149,17 @@ function prepeareTabletSearch() {
             btnSearch.style.display = "block";
         }    
     }
+    
+    
 }
 
 /* MAIN MENU ACTIVE COLOR */
 function mainMenuActiveColor() {
-    var mainMenu = document.body.querySelectorAll(".mainMenu li a");
+    var mainMenu = document.body.querySelectorAll(".main-menu li a");
     for (var i =0, n = mainMenu.length; i < n; i++) {
         mainMenu[i].onclick = function () {
             for (var j =0, k = mainMenu.length; j < k; j++) {
-                mainMenu[j].style.color = "#000000";
+                mainMenu[j].style.color = "#000";
             }
             this.style.color = "#f14a58";
         }
@@ -185,10 +188,10 @@ function ltMove() {
 
 /* VIEW SLIDER */
 function createViewSlider() {
-    var fullImage = document.body.querySelector(".fullPreview img");
-    var imageList = document.body.querySelectorAll(".smallPreview img");
+    var fullImage = document.body.querySelector(".preview__full img");
+    var imageList = document.body.querySelectorAll(".preview__small img");
     var shadow = document.createElement("div");
-    shadow.className = "imgContShadow";
+    shadow.className = "container__shadow";
     imageList[0].parentElement.appendChild(shadow);
     for (var i =0, n = imageList.length; i < n; i++) {
         imageList[i].onclick = function () {
@@ -201,7 +204,7 @@ function createViewSlider() {
     
 /* SIZE CHOOSE */
 function sizeChoose() {
-    var sizeList = document.body.querySelectorAll(".sizeBox");
+    var sizeList = document.body.querySelectorAll(".size__box");
     for (var i =0, n = sizeList.length; i < n; i++) {
         sizeList[i].onclick = function () {
             for (var j =0, k = sizeList.length; j < k; j++) {
@@ -214,7 +217,7 @@ function sizeChoose() {
 
 /* COLOR CHOOSE */
 function colorChoose() {
-    var colorList = document.body.querySelectorAll(".colorBox");
+    var colorList = document.body.querySelectorAll(".color__box");
     for (var i =0, n = colorList.length; i < n; i++) {
         colorList[i].onclick = function () {
             for (var j =0, k = colorList.length; j < k; j++) {
@@ -227,12 +230,12 @@ function colorChoose() {
 
 /* ADD TO BAG */
 function addToBag() {
-    var addToBag = document.body.querySelector(".addToBag");
+    var addToBag = document.body.querySelector(".add-to-bag");
     addToBag.onclick = function () {
 //step 1 - get item object options
-        var name = document.body.querySelector(".infoName").innerHTML;
-        var price = document.body.querySelector(".infoPrice span").innerHTML;
-        var sizeList = document.body.querySelectorAll(".sizeBox");
+        var name = document.body.querySelector(".info__name").innerHTML;
+        var price = document.body.querySelector(".info__price span").innerHTML;
+        var sizeList = document.body.querySelectorAll(".size__box");
         var size;
         for (var i =0, n = sizeList.length; i < n; i++) {
             if (toHexColor(getComputedStyle(sizeList[i]).backgroundColor) == "#707070") {
@@ -240,7 +243,7 @@ function addToBag() {
                 break;
             }
         }  
-        var colorList = document.body.querySelectorAll(".colorBox");
+        var colorList = document.body.querySelectorAll(".color__box");
         var color;
         for (var i =0, n = colorList.length; i < n; i++) {
             if (toHexColor(getComputedStyle(colorList[i]).backgroundColor) == "#707070") {
@@ -254,7 +257,7 @@ function addToBag() {
         src = src.substr(0, src.length - 5);
         var item = {"name": name, "price": price, "color": color, "size":size, "quantity": "1", "src": src};
 //step 3 - get top bag
-        var topBag = document.body.querySelector(".bagIn");    
+        var topBag = document.body.querySelector(".bag");    
 //step 4 - try is bag set
         var bag = JSON.parse(localStorage.getItem("bag"));
         var sBag;
@@ -296,7 +299,7 @@ function LoadTopBagData () {
     var bag = JSON.parse(localStorage.getItem("bag"));
     //if bag empty    
     if (bag != null) {
-        var topBag = document.body.querySelector(".bagIn"); 
+        var topBag = document.body.querySelector(".bag"); 
         var sumQuan = getSummQuant(bag);
         topBag.innerHTML = "Bag &pound; "+sumQuan[0] + " (" +sumQuan[1]+")";
     }
@@ -338,23 +341,24 @@ function toHexColor(color) {
 function sliderAnime() {
     var flag = true; 
     var slider1Timer = setInterval(function () {
-        var slider1 = document.body.querySelector(".banSec1Slider");
-        if ( - parseInt(getComputedStyle(slider1).marginTop)  > slider1.clientHeight * 1/3) {
+        var slider1 = document.body.querySelector(".section-1 .slider");
+        if (- parseInt(getComputedStyle(slider1).marginTop)  > slider1.clientHeight * 1/3) {
             slider1.style.transitionDuration = "0ms"
             slider1.style.marginTop = 0;
         }
         else {
             slider1.style.transitionDuration = "650ms"
-            slider1.style.marginTop = parseInt(getComputedStyle(slider1).marginTop)  - slider1.clientHeight/3 + "px";
+            slider1.style.marginTop = parseInt(getComputedStyle(slider1).marginTop) - slider1.clientHeight/3 + "px";
         }
     }, 3000); 
     var slider2Timer = setInterval(function () {
 // Part 4 with bags 
-        var slider2 = document.body.querySelector(".bS2Right a");
+        var slider2 = document.body.querySelector(".section-2 .right a");
         flag = !flag;
         if (flag == true)
             slider2.style.backgroundImage = 'url("img/start/slide_2/5_1.png")';
         else
             slider2.style.backgroundImage = 'url("img/start/slide_2/5_2.png")'; 
     }, 1000); 
+
 }

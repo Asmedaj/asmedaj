@@ -6,11 +6,11 @@
     <!--[if IE]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <title>Item</title>
+    <title>Shopping bag</title>
     <link type="text/css" rel="stylesheet" href="css/reset.css">
-    <link type="text/css" rel="stylesheet" media="screen and (min-width: 1025px)" href="css/deskItem.css">
-    <link type="text/css" rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 1024px)" href="css/tabletItem.css">
-    <link type="text/css" rel="stylesheet" media="screen and (max-width: 479px)" href="css/mobileItem.css">
+    <link type="text/css" rel="stylesheet" media="screen and (min-width: 1025px)" href="css/deskShoppingBag.css">
+    <link type="text/css" rel="stylesheet" media="screen and (min-width: 480px) and (max-width: 1024px)" href="css/tabletShoppingBag.css">
+    <link type="text/css" rel="stylesheet" media="screen and (max-width: 479px)" href="css/mobileShoppingBag.css">
 </head>
 <body>
     <header class="clearfix">
@@ -46,70 +46,25 @@
         </div>
     </header>
     <main>
-        <section class="back">
-            <a href="catalog.html"><span>&lt;</span> Back to catalog</a>    
-        </section>
-        <section class="item">
-            <div class="preview clearfix">
-                <div class="preview__full">
-                    <img src="img/item/1_1.jpg">
-                </div>
-                <div class="preview__small">
-                    <div class="container"><img src="img/item/1_1.jpg"></div>
-                    <div class="container"><img src="img/item/1_2.jpg"></div>
-                    <div class="container"><img src="img/item/1_3.jpg"></div>
-                </div>
-            </div>    
-            <div class="info">
-                <div class="info__name">Only Skinny Jeans</div>
-                <div class="info__price">&pound;<span>65.50</span></div>
-                <div class="info__view">    
-                    Featuring fine Italian wool, this elegant suit has pick-stitch edging, cascade buttons at the cuffs and a subtle stripe pattern throughout. 
-                </div>
-            </div>
-            <div class="item__size clearfix">
-                Size
-                <div class="size__conteiner clearfix"><!--
-                    --><div class="size__box">UK 52</div><!--
-                    --><div class="size__box">UK 54</div><!--
-                    --><div class="size__box">UK 56</div><!--
-                --></div>
-            </div>
-            <div class="item__color clearfix">
-                Color
-                <div class="color__conteiner clearfix"><!--
-                    --><div class="color__box">Black</div><!--
-                    --><div class="color__box">Blue</div><!--
-                --></div>
-            </div>
-            <button class="add-to-bag">Add to bag</button>
-        </section>
-        <section class="banner">
-            <div class="section-1">
-                <div class="slider">
-                    <a href="#" class="slider__item-1">
-                        <div class="text-1">Adidas Blue</div>
-                        <div class="text-2">For men</div>
-                    </a>
-                    <a href="#" class="slider__item-2"></a> 
-                    <a href="#" class="slider__item-3"></a> 
-                </div>
-            </div> 
-            <div class="section-2">
-                <div class="left"> 
-                    <a href="#">
-                        <div class="left__text-1">Repair Patches</div>
-                        <div class="left__text-2">&pound; 150.50</div>
-                    </a>
-                </div>
-                <div class="right">
-                    <a href="#">
-                        <div class="right__text-1">Sale</div>
-                        <div class="right__text-2">-70%</div>
-                    </a>
-                </div>
-            </div>
-        </section>
+	    <section class="back">
+	        <a href="#">Shopping bag</a>    
+	    </section>
+	    <section class="bag-main">
+	        <div class="conteiner clearfix"></div>
+	        <div class="bag__down clearfix">
+	            <div class="discount-info">
+	                You've qualified for Free UK Next Day Delivery on your order. Don't forget to enter the code nexday at checkout
+	            </div>
+	            <div class="bag__control clearfix">
+	                <div class="bag__empty"><span>Empty bag</span></div>
+	                <div class="buy-now">Buy now</div>
+	                <div class="cost">
+	                    <div class="cost__topic">Total Cost</div>
+	                    <div class="cost__sum">&pound; 0.00</div>
+	                </div>
+	            </div>
+	        </div>
+	    </section>
     </main>
     <footer>
         <section class="links">
@@ -173,6 +128,6 @@
             --></ul>
         </section>    
     </footer>
-    <script type="text/javascript" src="js/item.js"></script>
+    <script type="text/javascript" src="js/shoppingBag.js"></script>
 </body>
 </html>

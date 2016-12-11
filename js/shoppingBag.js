@@ -14,7 +14,7 @@ window.addEventListener("resize", changeDownMenu, false);
 changeTopic();
 /* CHANGE TOPIC ON RESIZE */ 
 function changeTopic() {
-    var topic = document.body.querySelector(".logo_tm a");
+    var topic = document.body.querySelector(".logo a");
     if (document.body.clientWidth < 480) {
         if(topic.innerHTML != "TL")
             topic.innerHTML = "TL";
@@ -29,19 +29,19 @@ function changeTopic() {
 /*FIX MAIN MENU SIZE */ 
 function stickyMenuSize() {
     if(document.body.clientWidth < 480) {
-        document.body.querySelector(".stickyHeader").style.width = getComputedStyle(document.body.querySelector("header")).width;
+        document.body.querySelector(".sticky-header").style.width = getComputedStyle(document.body.querySelector("header")).width;
     }
 }
 
 /* CHANGE DOWN MENU ON RESIZE */
 function changeDownMenu () {
     if (document.body.clientWidth < 480) {
-        if (document.body.querySelector(".down").firstElementChild != document.body.querySelector(".downMenu") ) {
+        if (document.body.querySelector(".down").firstElementChild != document.body.querySelector(".down__menu") ) {
             prepeareForMobile();    
         }
     }
     else {
-        if (document.body.querySelector(".down").firstElementChild == document.body.querySelector(".downMenu") ) {
+        if (document.body.querySelector(".down").firstElementChild == document.body.querySelector(".down__menu") ) {
             returnFromMobile();    
         }
         
@@ -51,7 +51,7 @@ function changeDownMenu () {
 /* CHANGE DOWN MENU ON LOAD */
 function prepeareForMobile () {
     if (document.body.clientWidth < 480) {
-        var downMenu = document.body.querySelector(".downMenu");
+        var downMenu = document.body.querySelector(".down__menu");
         var parent = downMenu.parentElement;
         var social = document.body.querySelectorAll(".social");
         parent.removeChild(downMenu);
@@ -60,7 +60,7 @@ function prepeareForMobile () {
         socialParent.removeChild(social[0]);
         socialParent.removeChild(social[1]);
         var end = document.createElement("div");
-        end.className = "socialAround";
+        end.className = "social-around";
         end.appendChild(social[0]);
         end.appendChild(social[1]);
         parent.insertBefore(end, parent.firstElementChild.nextElementSibling);
@@ -71,13 +71,13 @@ function prepeareForMobile () {
 function returnFromMobile() {
     if (document.body.clientWidth >= 480) {
         var down = document.body.querySelector(".down");
-        var downMenu = document.body.querySelector(".downMenu");
+        var downMenu = document.body.querySelector(".down__menu");
         var parent = downMenu.parentElement;
         var social = document.body.querySelectorAll(".social");
-        var end = document.body.querySelectorAll(".socialAround");
+        var end = document.body.querySelectorAll(".social-around");
         downMenu.parentElement.removeChild(downMenu);
         down.appendChild(downMenu);
-        var linksRight = document.body.querySelector(".linksRight");
+        var linksRight = document.body.querySelector(".links .right");
         linksRight.appendChild(social[0]);
         linksRight.appendChild(social[1]);
         down.removeChild(down.firstElementChild);
@@ -85,17 +85,17 @@ function returnFromMobile() {
     }
 }
 
-/* MOBILE MENU SHOW */
+
 function mobileMenu() {
-    var btnMainMenu = document.body.querySelector(".mainNav");
-    var closeMainMenu = document.body.querySelector(".closeMainMenu");
+    var btnMainMenu = document.body.querySelector(".main-nav");
+    var closeMainMenu = document.body.querySelector(".close-main-menu");
 // mobile menu show
     btnMainMenu.onclick = function (e) {
         if (this === e.target) {
             if (document.body.clientWidth < 480) {
-                var closeMainMenu = document.body.querySelector(".closeMainMenu");
-                var mainMenu = document.body.querySelector(".mainMenu");
-                var searchAround = document.body.querySelector(".searchAround");
+                var closeMainMenu = document.body.querySelector(".close-main-menu");
+                var mainMenu = document.body.querySelector(".main-menu");
+                var searchAround = document.body.querySelector(".search-around");
                 this.style.position = "absolute";
                 this.style.width = "100%";
                 this.style.zIndex = "3035";
@@ -111,8 +111,8 @@ function mobileMenu() {
     }
 // mobile menu close
     closeMainMenu.onclick = function () {
-        var mainMenu = document.body.querySelector(".mainMenu");
-        var searchAround = document.body.querySelector(".searchAround");
+        var mainMenu = document.body.querySelector(".main-menu");
+        var searchAround = document.body.querySelector(".search-around");
         btnMainMenu.style.cssText = "";
         mainMenu.style.display = "none";
         searchAround.style.display = "none";
@@ -122,8 +122,8 @@ function mobileMenu() {
 
 /* SEARCH FOR TABLET */
 function prepeareTabletSearch() {
-    var btnSearch = document.querySelector(".btnSearch");
-    var search = document.querySelector(".tabletSearch");
+    var btnSearch = document.querySelector(".btn-search");
+    var search = document.querySelector(".tablet-search");
 // on focus    
     btnSearch.onclick = function() {
         this.style.display = "none";
@@ -145,11 +145,13 @@ function prepeareTabletSearch() {
             btnSearch.style.display = "block";
         }    
     }
+    
+    
 }
 
 /* MAIN MENU ACTIVE COLOR */
 function mainMenuActiveColor() {
-    var mainMenu = document.body.querySelectorAll(".mainMenu li a");
+    var mainMenu = document.body.querySelectorAll(".main-menu li a");
     for (var i =0, n = mainMenu.length; i < n; i++) {
         mainMenu[i].onclick = function () {
             for (var j =0, k = mainMenu.length; j < k; j++) {
@@ -162,30 +164,30 @@ function mainMenuActiveColor() {
 
 /* CLEAR BAG */
 function clearBag() {
-    var btnClearBag = document.body.querySelector(".emptyBag span");
+    var btnClearBag = document.body.querySelector(".bag__empty span");
     btnClearBag.onclick = function() {
         localStorage.removeItem("bag");
-        var itemConteiner = document.body.querySelector(".itemConteiner");
+        var itemConteiner = document.body.querySelector(".conteiner");
         itemConteiner.innerHTML = "";
         itemConteiner.innerHTML = "Your shopping bag is empty. Use Catalog to add new items";
-        var topBag = document.body.querySelector(".bagIn"); 
+        var topBag = document.body.querySelector(".bag"); 
         topBag.innerHTML = "Bag";
-        var downBag = document.body.querySelector(".costSum"); 
+        var downBag = document.body.querySelector(".cost__sum"); 
         downBag.innerHTML = "&pound; 0.00";    
     } 
 }
 
 /* BUY NOW */
 function buyNow() {
-    var btnbuyNow = document.body.querySelector(".buyNow");
+    var btnbuyNow = document.body.querySelector(".buy-now");
     btnbuyNow.onclick = function() {
         localStorage.removeItem("bag");
-        var itemConteiner = document.body.querySelector(".itemConteiner");
+        var itemConteiner = document.body.querySelector(".conteiner");
         itemConteiner.innerHTML = "";
         itemConteiner.innerHTML = "Thank you for your purchase";
-        var topBag = document.body.querySelector(".bagIn"); 
+        var topBag = document.body.querySelector(".bag"); 
         topBag.innerHTML = "Bag";
-        var downBag = document.body.querySelector(".costSum"); 
+        var downBag = document.body.querySelector(".cost__sum"); 
         downBag.innerHTML = "&pound; 0.00";    
     }
 }
@@ -224,7 +226,7 @@ function RemoveItemF() {
         
     }
     if (bag.length == 0) {
-        var itemConteiner = document.body.querySelector(".itemConteiner");
+        var itemConteiner = document.body.querySelector(".conteiner");
         itemConteiner.innerHTML = "";
         itemConteiner.innerHTML = "Your shopping bag is empty. Use Catalog to add new items";    
     }
@@ -234,7 +236,7 @@ function RemoveItemF() {
 /* LOAD MAIN DATA FROM BAG */
 function loadDataFromBag() {
 //step 1 - get context
-    var itemConteiner = document.body.querySelector(".itemConteiner");
+    var itemConteiner = document.body.querySelector(".conteiner");
 //step 2 - get data from bag    
     var bag = JSON.parse(localStorage.getItem("bag"));
     if (bag == null) {
@@ -250,31 +252,31 @@ function loadDataFromBag() {
             item.className = "item clearfix";
             var itemPreview = document.createElement("div");
 //left part
-            itemPreview.className = "itemPreview";
+            itemPreview.className = "item__preview";
             var img = document.createElement("img");
             img.src = "img/shoppingBag/" + bag[i].src + ".png";
             var itemPrice = document.createElement("div");
-            itemPrice.className = "itemPrice";
+            itemPrice.className = "item__price";
             itemPrice.innerHTML = "&pound; " + (bag[i].price/bag[i].quantity).toFixed(2);
             itemPreview.appendChild(img);
             itemPreview.appendChild(itemPrice);
 //right part            
             var itemOverview = document.createElement("div");
-            itemOverview.className = "itemOverview";
+            itemOverview.className = "item__overview";
             var itemName = document.createElement("div");
-            itemName.className = "itemName";
+            itemName.className = "item__name";
             itemName.innerHTML = bag[i].name;
             var itemColor = document.createElement("div");
-            itemColor.className = "itemColor";
+            itemColor.className = "item__color";
             itemColor.innerHTML = "Color: " + bag[i].color;
             var itemSize = document.createElement("div");
-            itemSize.className = "itemSize";
+            itemSize.className = "item__size";
             itemSize.innerHTML = "Size: " + bag[i].size;
             var itemQuantity = document.createElement("div");
-            itemQuantity.className = "itemQuantity";
+            itemQuantity.className = "item__quantity";
             itemQuantity.innerHTML = "Quantity: " + bag[i].quantity;
             var removeItem = document.createElement("div");
-            removeItem.className = "removeItem";
+            removeItem.className = "item__remove";
             removeItem.innerHTML = "Remove item";
             removeItem.onclick = RemoveItemF;
             itemOverview.appendChild(itemName);
@@ -293,8 +295,8 @@ function loadDataFromBag() {
 /* LOAD DATA TO TOP BAG */
 function LoadTopBagData() {
     var bag = JSON.parse(localStorage.getItem("bag"));
-    var topBag = document.body.querySelector(".bagIn");
-    var downBag = document.body.querySelector(".costSum"); 
+    var topBag = document.body.querySelector(".bag");
+    var downBag = document.body.querySelector(".cost__sum"); 
     //if bag not empty    
     if (bag != null) {
         var sumQuan = getSummQuant(bag);

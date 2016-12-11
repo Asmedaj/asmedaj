@@ -1,3 +1,40 @@
+@font-face {
+    font-family: Roboto;
+    src:/* url('../fonts/Roboto/RobotoRegular.woff') format('woff'),*/
+         url('../fonts/Roboto/RobotoRegular.ttf') format('truetype'),
+         url('../fonts/Roboto/RobotoRegular.svg#RobotoRegular') format('svg');
+    font-weight: normal;     
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url('../fonts/Roboto/RobotoBold.woff') format('woff'),
+         url('../fonts/Roboto/RobotoBold.ttf') format('truetype'),
+         url('../fonts/Roboto/RobotoBold.svg#RobotoBold') format('svg');
+    font-weight: bold;
+} 
+
+@font-face {
+    font-family: OpenSans;
+    src: url('../fonts/OpenSans/OpenSansBold.eot');
+    src: url('../fonts/OpenSans/OpenSansBold.eot') format('embedded-opentype'),
+         url('../fonts/OpenSans/OpenSansBold.woff') format('woff'),
+         url('../fonts/OpenSans/OpenSansBold.ttf') format('truetype'),
+         url('../fonts/OpenSans/OpenSansBold.svg#OpenSansBold') format('svg');
+    font-weight: bold;
+} 
+
+@font-face {
+    font-family: Crimson;
+    src: url('../fonts/Crimson/CrimsonTextItalic.woff') format('woff'),
+         url('../fonts/Crimson/CrimsonTextItalic.ttf') format('truetype'),
+         url('../fonts/Crimson/CrimsonTextItalic.svg#CrimsonTextItalic') format('svg');
+    font-style: italic;     
+}
+
+
+
+
 
 
 

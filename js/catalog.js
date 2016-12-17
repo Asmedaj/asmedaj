@@ -5,7 +5,6 @@ prepeareTabletSearch();
 mainMenuActiveColor();
 changeTopic();
 createFilterForTablet();
-onItemHover();
 createPriceTrackBar();
 createDeskFilter();
 bannerMove();
@@ -99,33 +98,28 @@ function returnFromMobile() {
 function mobileMenu() {
     var btnMainMenu = document.body.querySelector(".main-nav");
     var closeMainMenu = document.body.querySelector(".close-main-menu");
+    var mainMenuWrap = document.body.querySelector(".main-menu__wrap");
 // mobile menu show
     btnMainMenu.onclick = function (e) {
         if (this === e.target) {
             if (document.body.clientWidth < 480) {
-                var closeMainMenu = document.body.querySelector(".close-main-menu");
-                var mainMenu = document.body.querySelector(".main-menu");
-                var searchAround = document.body.querySelector(".search-around");
                 this.style.position = "absolute";
                 this.style.width = "100%";
                 this.style.zIndex = "3035";
                 this.style.background = "none";
                 this.style.border = "none";
                 this.style.height = "auto";
-                this.style.cursor = "auto";
                 closeMainMenu.style.display = "block";
-                mainMenu.style.display = "block";
-                searchAround.style.display = "block";
+                mainMenuWrap.style.display = "block";
+                mainMenuWrap.style.height = document.documentElement.clientHeight - 69 + "px";
+                mainMenuWrap.style.width = this.clientWidth;
             }
         }
     }
 // mobile menu close
     closeMainMenu.onclick = function () {
-        var mainMenu = document.body.querySelector(".main-menu");
-        var searchAround = document.body.querySelector(".search-around");
         btnMainMenu.style.cssText = "";
-        mainMenu.style.display = "none";
-        searchAround.style.display = "none";
+        mainMenuWrap.style.cssText = "";
         this.style.display = "none";
     }
 }
@@ -182,12 +176,14 @@ function filterSticky() {
 function createFilterForTablet() {
     var fTabletMenuList = document.body.querySelector(".tablet-menu__list");
     var dropDownMenu = document.body.querySelector(".drop-down-menu");
+    var stripConteiner = dropDownMenu.querySelector(".drop-down-menu .list");
 // show filter
     fTabletMenuList.onclick = function () {
         this.lastElementChild.style.display = "none";
         var fon = dropDownMenu.lastElementChild;
         fon.style.height = document.documentElement.clientHeight + "px";
         dropDownMenu.style.display = "block";
+        stripConteiner.style.height = document.documentElement.clientHeight - 119 +"px";
     }
 // close filter
     dropDownMenu.firstElementChild.firstElementChild.onclick = function () {
@@ -252,7 +248,7 @@ function createFilterForTablet() {
     }
 // filter strip move
     var stripList = dropDownMenu.querySelectorAll(".item__list");
-    var stripConteiner = dropDownMenu.querySelector(".drop-down-menu .list");
+    
     for (var i =0, n = stripList.length; i < n; i++) {
         stripList[i].onmousedown = function (e) {
             flag = false;
@@ -368,28 +364,7 @@ function mainMenuActiveColor() {
     }
 }
 
-/*ON ITEM HOVER*/
-function onItemHover() {
-    var itemList = document.body.querySelectorAll(".arrivals__item a img");
-    for (var i =0, n = itemList.length; i < n; i++) {
-        itemList[i].onmouseenter = function () {
-            this.nextElementSibling.style.height = getComputedStyle(this).height;
-            this.nextElementSibling.style.display = "block";
-        }
-    }
-    var itemShadow = document.body.querySelector(".shadow");
-    itemShadow.onmouseenter = function () {
-        this.nextElementSibling.nextElementSibling.style.height = getComputedStyle(this).height;
-        this.nextElementSibling.nextElementSibling.style.display = "block";
-    }
-// on blur    
-    var popList = document.body.querySelectorAll(".quick-view");
-    for (var i =0, n = popList.length; i < n; i++) {
-        popList[i].onmouseleave = function () {
-            this.style.display = "none";
-        }
-    }
-}
+
 
 /* ON DESK FILTER HOVER */
 function createDeskFilter() {
@@ -417,17 +392,14 @@ function createDeskFilter() {
             var GrandParent = Parent.parentElement;
 // change style for choosen filter
             if (this.innerHTML !== "Not selected") {
-                GrandParent.firstElementChild.style.paddingTop = "14px";
-                GrandParent.firstElementChild.style.fontFamily = "HelveticaNeueBold";
-                GrandParent.firstElementChild.style.fontSize = "12px";
+                GrandParent.firstElementChild.style.paddingTop = "13px";
+                GrandParent.firstElementChild.style.font = "bold 12px Roboto";
                 GrandParent.firstElementChild.nextElementSibling.innerHTML = this.innerHTML;
                 GrandParent.firstElementChild.nextElementSibling.style.display = "block";
                 GrandParent.style.backgroundColor = "#f7f7f7";
             }
             else {
-                GrandParent.firstElementChild.style.paddingTop = "21px";
-                GrandParent.firstElementChild.style.fontFamily = "FuturaPTDemi";
-                GrandParent.firstElementChild.style.fontSize = "18px";
+                GrandParent.firstElementChild.style = "";
                 GrandParent.style.backgroundColor = "#ffffff";
                 GrandParent.firstElementChild.nextElementSibling.style.display = "none";
             }
@@ -439,16 +411,6 @@ function createDeskFilter() {
 /* PRICE TRACKBAR */
 function createPriceTrackBar() {
     var mainMenuList = document.body.querySelectorAll(".filters__menu >li");
-//show
-    mainMenuList[mainMenuList.length - 1].onmouseenter = function () {
-        this.style.backgroundColor = "#ffffff";
-        this.firstElementChild.nextElementSibling.style.opacity = "1"; 
-    }
-//hide
-    mainMenuList[mainMenuList.length - 1].onmouseleave  = function (e) {
-        this.style.backgroundColor = "#ffffff";
-        this.firstElementChild.nextElementSibling.style.opacity = "0";
-    }
 //trackbar mooving    
     var mainTrack = document.body.querySelector(".main-track");
     var left = document.body.querySelector(".price-slider .left");
@@ -638,8 +600,6 @@ function addMoreItems() {
                             img.src = list[i]["img"];
                             var quickView = document.createElement("div");
                             quickView.className = "quick-view";
-                            var morePhotos = document.createElement("div");
-                            morePhotos.className = "more-photos";
                             var itemName = document.createElement("div");
                             itemName.className = "name";
                             var itemPrice = document.createElement("div");
@@ -647,9 +607,7 @@ function addMoreItems() {
                             //compile
                             itemPrice.innerHTML = "&pound; " + list[i]["price"];
                             itemName.innerHTML = list[i]["name"];
-                            morePhotos.innerHTML = "More photos";
-                            quickView.innerHTML = "quickView";
-                            quickView.appendChild(morePhotos);
+                            quickView.innerHTML = "View item";
                             a.appendChild(img);
                             a.appendChild(quickView);
                             a.appendChild(itemName);
@@ -662,8 +620,6 @@ function addMoreItems() {
                         for (var i = 0, n = arrItemList.length; i < n; i++){
                             arrItemList[i].style.display = "block";
                         }
-                        
-                        onItemHover();
                         var doc =   xmlhttp.responseText;
                 }
             }

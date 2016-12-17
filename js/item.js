@@ -11,9 +11,11 @@ addToBag();
 sliderAnime();
 changeTopic();
 ltMove();
+changePrice();
 window.addEventListener("resize",stickyMenuSize, false);
 window.addEventListener("resize", changeDownMenu, false);
 window.addEventListener("resize",changeTopic, false);
+window.addEventListener("resize",changePrice, false);
 
 /* CHANGE TOPIC ON RESIZE */ 
 function changeTopic() {
@@ -25,6 +27,19 @@ function changeTopic() {
     else {
         if (topic.innerHTML != "Template")
             topic.innerHTML = "Template";
+    }
+        
+}
+
+function changePrice() {
+    var itemPrice = document.body.querySelector(".info__price");
+    var parent = itemPrice.parentElement;
+    parent.removeChild(itemPrice);
+    if (document.body.clientWidth > 1025) {
+        parent.insertBefore(itemPrice,parent.children[2]);    
+    }
+    else {
+        parent.insertBefore(itemPrice,parent.children[1]);    
     }
         
 }
@@ -92,33 +107,28 @@ function returnFromMobile() {
 function mobileMenu() {
     var btnMainMenu = document.body.querySelector(".main-nav");
     var closeMainMenu = document.body.querySelector(".close-main-menu");
+    var mainMenuWrap = document.body.querySelector(".main-menu__wrap");
 // mobile menu show
     btnMainMenu.onclick = function (e) {
         if (this === e.target) {
             if (document.body.clientWidth < 480) {
-                var closeMainMenu = document.body.querySelector(".close-main-menu");
-                var mainMenu = document.body.querySelector(".main-menu");
-                var searchAround = document.body.querySelector(".search-around");
                 this.style.position = "absolute";
                 this.style.width = "100%";
                 this.style.zIndex = "3035";
                 this.style.background = "none";
                 this.style.border = "none";
                 this.style.height = "auto";
-                this.style.cursor = "auto";
                 closeMainMenu.style.display = "block";
-                mainMenu.style.display = "block";
-                searchAround.style.display = "block";
+                mainMenuWrap.style.display = "block";
+                mainMenuWrap.style.height = document.documentElement.clientHeight - 69 + "px";
+                mainMenuWrap.style.width = this.clientWidth;
             }
         }
     }
 // mobile menu close
     closeMainMenu.onclick = function () {
-        var mainMenu = document.body.querySelector(".main-menu");
-        var searchAround = document.body.querySelector(".search-around");
         btnMainMenu.style.cssText = "";
-        mainMenu.style.display = "none";
-        searchAround.style.display = "none";
+        mainMenuWrap.style.cssText = "";
         this.style.display = "none";
     }
 }
@@ -208,9 +218,9 @@ function sizeChoose() {
     for (var i =0, n = sizeList.length; i < n; i++) {
         sizeList[i].onclick = function () {
             for (var j =0, k = sizeList.length; j < k; j++) {
-                sizeList[j].style.backgroundColor = "#ffffff";
+                sizeList[j].style.borderColor = "#fff";
             }
-            this.style.backgroundColor = "#707070";
+            this.style.borderColor = "#e5e5e5";
         }
     }
 }
@@ -221,9 +231,9 @@ function colorChoose() {
     for (var i =0, n = colorList.length; i < n; i++) {
         colorList[i].onclick = function () {
             for (var j =0, k = colorList.length; j < k; j++) {
-                colorList[j].style.backgroundColor = "#ffffff";
+                colorList[j].style.borderColor = "#fff";
             }
-            this.style.backgroundColor = "#707070";
+            this.style.borderColor = "#e5e5e5";
         }
     }
 }
@@ -238,7 +248,7 @@ function addToBag() {
         var sizeList = document.body.querySelectorAll(".size__box");
         var size;
         for (var i =0, n = sizeList.length; i < n; i++) {
-            if (toHexColor(getComputedStyle(sizeList[i]).backgroundColor) == "#707070") {
+            if (toHexColor(getComputedStyle(sizeList[i]).borderColor) == "#e5e5e5") {
                 size = sizeList[i].innerHTML;
                 break;
             }
@@ -246,7 +256,7 @@ function addToBag() {
         var colorList = document.body.querySelectorAll(".color__box");
         var color;
         for (var i =0, n = colorList.length; i < n; i++) {
-            if (toHexColor(getComputedStyle(colorList[i]).backgroundColor) == "#707070") {
+            if (toHexColor(getComputedStyle(colorList[i]).borderColor) == "#e5e5e5") {
                 color = colorList[i].innerHTML;
                 break;
             }
